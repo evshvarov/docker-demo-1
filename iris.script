@@ -1,0 +1,10 @@
+ ; file with objectscript commands to initiate the iris database
+ zn "%SYS"
+ Do ##class(Security.Users).UnExpireUserPasswords("*")
+
+ zn "USER"
+
+ do $SYSTEM.OBJ.LoadDir("/home/irisowner/dev/src","ck",,1)
+
+
+ halt

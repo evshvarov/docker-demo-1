@@ -1,3 +1,6 @@
+# remove iris-main.log
+iris-main.log
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
