@@ -1,4 +1,4 @@
-Class demo.democlass
+Class shvarov.demo.democlass
 {
 
 /// Hello World

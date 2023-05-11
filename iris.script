@@ -4,7 +4,7 @@
 
  zn "USER"
 
- do $SYSTEM.OBJ.LoadDir("/home/irisowner/dev/src","ck",,1)
-
+ ;do $SYSTEM.OBJ.LoadDir("/home/irisowner/dev/src","ck",,1)
+ zpm "load /home/irisowner/dev/ -v"
 
  halt
