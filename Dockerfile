@@ -5,8 +5,17 @@ FROM $IMAGE
 
 WORKDIR /home/irisowner/dev
 
+## Embedded Python environment
+ENV IRISUSERNAME "_SYSTEM"
+ENV IRISPASSWORD "SYS"
+ENV IRISNAMESPACE "USER"
+ENV PYTHON_PATH=/usr/irissys/bin/
+ENV PATH "/usr/irissys/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/irisowner/bin"
+
+
 RUN --mount=type=bind,src=.,dst=. \
-    iris start IRIS \
-        && iris session IRIS < /home/irisowner/dev/iris.script \
-        && iris stop IRIS quietly
+    pip3 install -r requirements.txt  \
+    && iris start IRIS \
+    && iris session IRIS < /home/irisowner/dev/iris.script \
+    && iris stop IRIS quietly
 

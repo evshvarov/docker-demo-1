@@ -8,6 +8,7 @@
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="shvarov.demo.PKG"/>
+
     </Module>
   </Document>
 </Export>
